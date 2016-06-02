@@ -1,0 +1,35 @@
+<project name="G_n_p_generator" default="jar" basedir=".">
+
+<property name="src" location="src"/>
+<property name="build" location="bin"/>
+
+<target name="all" depends="jar">
+   <tstamp/>
+   <echo message="Done!"/>
+</target>
+
+<target name="clean">
+   <delete dir="${build}"/>
+</target>
+
+<target name="compile" depends="init">
+   <javac srcdir="${src}" destdir="${build}/generator/classes" includeAntRuntime="no" />
+</target>
+
+
+<target name="jar" depends="compile">
+   <jar destfile="G_n_p_generator.jar" basedir="${build}/generator/classes">
+       <manifest>
+           <attribute name="Main-Class" value="generator.GenerateGraph"/>
+       </manifest>
+   </jar>
+</target>
+
+<target name="init" depends="clean">
+  <tstamp/>
+  <mkdir dir="${build}"/>
+  <mkdir dir="${build}/generator"/>
+  <mkdir dir="${build}/generator/classes"/>
+</target>
+
+</project>

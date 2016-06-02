@@ -1,0 +1,7 @@
+// check for triangle
+for_all ( v0 in V \ {e0,e1} ) do 
+      if ( {e0,v0} in E and {e1,v0} in E ) then
+         return true
+      end if
+end for
+return false
