@@ -45,4 +45,4 @@ according to vertices and with the probability 1/n. Note that in this case has
 the constraint in the file triangle.txt been used.
 
 
-NOTE: If you are using mac you have replace ( with \( and ) with \).
+NOTE: If you are using mac you have to replace ( with \( and ) with \).
