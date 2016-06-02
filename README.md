@@ -43,6 +43,3 @@ according to vertices and with the probability 1/sqrt(n).
 This will result in a graph containing 10 vertices and no triangles  generated 
 according to vertices and with the probability 1/n. Note that in this case has 
 the constraint in the file triangle.txt been used.
-
-
-NOTE: If you are using mac you have to replace ( with "\(" and ) with "\)".
