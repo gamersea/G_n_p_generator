@@ -1,0 +1,17 @@
+// check for octahedron
+for_all ( v0 in V \ {e0,e1} ) do 
+   for_all ( v1 in V \ {e0,e1,v0} ) do
+      if ( {e0,v0} in E and {e0,v1} in E and {v0,v1} in E and {e1,v0} in E ) then
+         for_all ( v2 in V \ {e0,e1,v0,v1} ) do
+              if ( {e0,v2} in E and {v1,v2} in E and {v2,e1} in E ) then
+                 for_all ( v3 in V \ {e0,e1,v0,v1,v2} ) do
+                    if ( {e1,v3} in E and {v0,v3} in E and {v1,v3} in E and {v2,v3} in E ) then
+                       return true
+                    end if
+                 end for
+             end if
+         end for
+      end if
+   end for
+end for
+return false
